@@ -27,3 +27,13 @@ while True:
 	# 붙여넣기
 	hwp.HAction.GetDefault("Paste", hwp.HParameterSet.HSelectionOpt.HSet)
 	hwp.HAction.Execute("Paste", hwp.HParameterSet.HSelectionOpt.HSet)
+
+hwp.FindCtrl()
+hwp.HAction.GetDefault("ShapeObjDialog", hwp.HParameterSet.HShapeObject.HSet)
+hwp.HParameterSet.HShapeObject.Height = 17007
+hwp.HParameterSet.HShapeObject.Width = 22677
+# hwp.HParameterSet.HShapeObject.HorzRelTo = hwp.HorzRel("Para")
+# hwp.HParameterSet.HShapeObject.HSet.SetItem("ShapeType", 1)
+print(hwp.HAction.Execute("ShapeObjDialog", hwp.HParameterSet.HShapeObject.HSet))
+
+# hwp.Save
